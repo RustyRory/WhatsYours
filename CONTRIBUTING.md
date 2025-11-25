@@ -1,6 +1,6 @@
-# Contributing to Guess It?
+# Contributing to What's Yours?
 
-Thank you for your interest in contributing to **Guess It?**  
+Thank you for your interest in contributing to **What's Yours?**  
 This project was created during our English Game Week and continues to evolve with improvements, fixes, and new ideas.
 
 ---
@@ -54,4 +54,4 @@ Your PR will be reviewed by the team before merging.
 
 Please remain respectful, collaborative, and constructive in all interactions.
 
-Thank you for helping improve **Guess It?** 🎨
+Thank you for helping improve **What's Yours?** 🎨
