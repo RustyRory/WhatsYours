@@ -1,6 +1,6 @@
-# Installation & Setup Guide — Guess It?
+# Installation & Setup Guide — What's Yours?
 
-This project includes documentation, assets, and prototypes for the _Guess It?_ serious game.  
+This project includes documentation, assets, and prototypes for the _What's Yours?_ serious game.  
 Follow these steps to install or use the resources locally.
 
 ---
@@ -22,7 +22,7 @@ No code execution is required for the base version of the game.
 ### Option A — Clone with Git
 
 ```
-git clone https://github.com/your-username/guess-it.git
+git clone https://github.com/RustyRory/WhatsYours/
 cd guess-it
 ```
 
@@ -39,7 +39,7 @@ cd guess-it
 Important directories:
 
 - `/assets` → logos, icons, color palettes, visual assets
-- `/game-rules` → game rules in FR/EN
+- `/game-rules` → game rules in EN
 - `/minigames` → mini-game prototypes and explanations
 - `/docs` → project documentation
 - `/prototype` → mockups and early UX concepts
@@ -59,4 +59,4 @@ To test the game:
 
 ## 🙌 You're Ready!
 
-You can now explore, modify, or contribute to **Guess It?**.
+You can now explore, modify, or contribute to **What's Yours**.

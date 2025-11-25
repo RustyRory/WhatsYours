@@ -1,9 +1,22 @@
-# Changelog — Guess It?
+# Changelog — What's Yours?
 
 All notable changes to this project will be documented here.
 
 The format follows _Keep a Changelog_ conventions:  
 https://keepachangelog.com/
+
+---
+
+## [0.3.0] — 2025-11-25
+
+### Updated
+
+- index.html
+- rules.html
+- score.html
+- score.js
+- README.md
+- logo
 
 ---
 

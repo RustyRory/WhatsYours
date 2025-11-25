@@ -1,6 +1,6 @@
-# 🎨 Guess It? — Serious Game (English Game Week)
+# 🎨 What's Yours? — Serious Game (English Game Week)
 
-Welcome to **Guess It?**, a serious game created as part of our **English Game Week**, bringing together several digital fields of **My Digital School Angers**:  
+Welcome to **What's Yours?**, a serious game created as part of our **English Game Week**, bringing together several digital fields of **My Digital School Angers**:  
 **Web Development, Cybersecurity, Digital Creation, and Digital Marketing.**  
 Our goal is to design an educational game in English focused on **Brand Design** (logos, colors, typography, slogans, brand identity…).
 
@@ -10,7 +10,7 @@ This repository contains all resources related to the development, design, and r
 
 ## 🧠 Concept
 
-**Guess It?** is a game inspired by the classic _Guess Who?_, adapted to the world of **branding**.  
+**What's Yours?** is a game inspired by the classic _Guess Who?_, adapted to the world of **branding**.  
 Players must guess the brand chosen by their opponent by asking **yes/no questions**, eliminating possibilities along the way.
 
 A game is played **1 vs 1**, lasts around **20 minutes**, and includes **mini-games** to make each round more dynamic while helping players learn branding fundamentals.
@@ -109,18 +109,18 @@ A player may choose to **guess the opponent’s card** instead of asking a quest
 - If the guess is correct → **the player instantly wins the round**.
 - If the guess is incorrect → **the player instantly loses the round**.
 
-The first player to win **3 rounds** becomes the **Guess Champion**.
+The first player to win **3 rounds** becomes the **What's Yours Champion**.
 
 ---
 
 ## 👥 Team
 
-| Member | Specialty         |
-| ------ | ----------------- |
-| …      | Web Development   |
-| …      | Cybersecurity     |
-| …      | Digital Creation  |
-| …      | Digital Marketing |
+| Member             | Specialty         |
+| ------------------ | ----------------- |
+| Damien Paszkiewicz | Web Development   |
+| Lenny Chauvat      | Cybersecurity     |
+| Axelle Touron      | Digital Creation  |
+| Steven Plumas      | Digital Marketing |
 
 ---
 
