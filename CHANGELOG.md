@@ -13,8 +13,10 @@ https://keepachangelog.com/
 
 - css
 - js
-- assets
+- Logo
+- Font
 - score.html
+- rules.html
 
 ### Updated
 
