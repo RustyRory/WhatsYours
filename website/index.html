@@ -16,37 +16,52 @@
 
   <body>
     <!-- Header -->
-    <header>
-      <h1 class="display-4 fw-bold">Guess It?</h1>
-      <p class="lead">A Serious Game About Brand Design</p>
+
+    <header class="text-center">
+      <h1 class="visually-hidden">
+        Guess It? — A Serious Game About Design
+      </h1>
+      <img
+        src="assets/images/logo.png"
+        alt="Guess It? Logo"
+        class="img-fluid mb-3"
+        style="max-height: 150px"
+      />
+      <p class="lead">A Serious Game About Design</p>
     </header>
 
     <!-- Main Content -->
     <main class="container py-5">
-      <div class="row justify-content-center mb-5">
-        <div class="col-md-8">
+      <div class="row justify-content-center mb-4">
+        <div class="col-md-12">
           <div class="card shadow-sm p-4">
-            <h2 class="mb-3">Welcome!</h2>
+            <h2 class="mb-3 text-center">Welcome!</h2>
             <p>
               <strong>Guess It?</strong> is an educational serious game created
               during the English Game Week. It challenges players to identify
               brands using clues related to logos, colors, fonts, slogans and
-              overall brand identity.
+              overall identity.
             </p>
             <p>
               Designed for digital media students, the game helps develop
-              branding knowledge, strategic thinking and English communication
+              design knowledge, strategic thinking and English communication
               skills — all through fun, competitive gameplay.
             </p>
-
-            <a href="score.html" class="btn btn-primary mt-2">PLAY</a>
           </div>
         </div>
       </div>
 
+      <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+          <a href="score.html" c class="btn btn-template shadow-sm p-4">
+            <h3>PLAY</h3>
+          </a>
+        </div>
+
+
       <!-- Feature Cards -->
 
-      <div class="row text-center g-4">
+      <div class="row text-center g-4 mt-4">
         <div class="col-md-4">
           <div class="card shadow-sm p-4">
             <h3>🎨 Branding</h3>
@@ -76,7 +91,13 @@
             <p>
               Learn how to play Guess It? and understand the game mechanics.
             </p>
-            <a href="rules.html" class="btn btn-primary mt-3">See the Rules</a>
+            <div class="row justify-content-center">
+              <div class="col-md-6 text-center">
+                <a href="rules.html" class="btn btn-template mt-3"
+                  >See the Rules</a
+                >
+              </div>
+            </div>
           </div>
         </div>
       </div>
