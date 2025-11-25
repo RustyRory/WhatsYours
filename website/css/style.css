@@ -1,0 +1,63 @@
+/* Déclaration de la font */
+@font-face {
+  font-family: "MyFont"; /* nom que tu utiliseras ensuite */
+  src: url("../assets/fonts/genty-sans-regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Appliquer la font à tout le site */
+body {
+  font-family: "MyFont", sans-serif;
+  background: #eb663b;
+}
+
+header {
+  background: #fff; /* or #31726f for blue */
+  color: black;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.card {
+  border-radius: 1rem;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  color: #e6c14c;
+}
+
+h2,
+h3 {
+  margin-top: 1rem;
+}
+
+.btn-template {
+  background-color: #e6c14c;
+  color: #fff; /* texte noir pour contraste */
+  border: none;
+
+  transition: background-color 0.5s ease; /* couleur toujours animée */
+}
+
+/* Keyframes pour le zoom pulsation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.btn-template:hover {
+  background-color: #7cc7c2; /* un peu plus foncé au survol */
+
+  animation: pulse 1s infinite; /* boucle tant que la souris est dessus */
+  color: #fff;
+}
