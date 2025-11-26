@@ -16,7 +16,7 @@ Click the **Fork** button on the project page to create your own copy.
 Use a descriptive branch name:
 
 ```
-git checkout -b feature/new-mini-game
+git checkout -b feat/new-mini-game
 git checkout -b fix/typo-rulebook
 ```
 

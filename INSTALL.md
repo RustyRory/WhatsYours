@@ -23,7 +23,7 @@ No code execution is required for the base version of the game.
 
 ```
 git clone https://github.com/RustyRory/WhatsYours/
-cd guess-it
+cd WhatsYours
 ```
 
 ### Option B — Download ZIP
@@ -38,11 +38,11 @@ cd guess-it
 
 Important directories:
 
+- `/website` → main folder of the website
 - `/assets` → logos, icons, color palettes, visual assets
-- `/game-rules` → game rules in EN
-- `/minigames` → mini-game prototypes and explanations
+- `/css` → styles
+- `/js` → scripts
 - `/docs` → project documentation
-- `/prototype` → mockups and early UX concepts
 
 ---
 

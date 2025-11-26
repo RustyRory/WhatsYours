@@ -7,6 +7,16 @@ https://keepachangelog.com/
 
 ---
 
+## [0.4.1] — 2025-11-26
+
+### Updated
+
+- README.md
+- CONTRIBUTING.md
+- INSTALL.md
+
+---
+
 ## [0.4.0] — 2025-11-26
 
 ### Added

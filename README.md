@@ -27,7 +27,7 @@ Guess the brand card selected by your opponent **before they guess yours**, usin
 - Colors
 - Slogans
 
-The first player to win **3 rounds** becomes the **Guess Champion**.
+The first player to win **3 rounds** becomes the **Whats Yours Champion**.
 
 ---
 
