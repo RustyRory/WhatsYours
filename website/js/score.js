@@ -8,17 +8,32 @@ const player1Display = document.getElementById("player1Display");
 const player2Display = document.getElementById("player2Display");
 
 // --- Modals ---
+const modalTip = new bootstrap.Modal(document.getElementById("tipModal")); // Tip keyboard modal
 const modalPlayer = new bootstrap.Modal(document.getElementById("playerModal"));
 const modalStart = new bootstrap.Modal(document.getElementById("startModal"));
 const modalReset = new bootstrap.Modal(document.getElementById("resetModal"));
 const modalWinner = new bootstrap.Modal(document.getElementById("winnerModal"));
+const modalPush = new bootstrap.Modal(document.getElementById("pushModal"));
 
-// Show name modal when page loads
+// --- Buzz sound ---
+const buzzSound = new Audio("assets/sounds/buzz.mp3");
+
+// Cooldown anti-spam buzz
+let buzzCooldown = false;
+const COOLDOWN_TIME = 1000;
+
+// --- Page load: show tip modal first ---
 document.addEventListener("DOMContentLoaded", () => {
+  modalTip.show();
+});
+
+// --- Continue after reading tip ---
+document.getElementById("tipContinueBtn").addEventListener("click", () => {
+  modalTip.hide();
   modalPlayer.show();
 });
 
-// Validate player names and start game
+// --- Start game ---
 function startGame() {
   const p1 = document.getElementById("player1Name").value.trim();
   const p2 = document.getElementById("player2Name").value.trim();
@@ -31,19 +46,22 @@ function startGame() {
   player1Display.textContent = p1;
   player2Display.textContent = p2;
 
+  // Update buzz labels
+  document.getElementById("player1BuzzLabel").textContent = p1;
+  document.getElementById("player2BuzzLabel").textContent = p2;
+
   modalPlayer.hide();
   document.getElementById("scoreboard").style.display = "block";
 
   modalStart.show();
 
-  // Reset any previous scores
   score1 = 0;
   score2 = 0;
   score1Display.textContent = "0";
   score2Display.textContent = "0";
 }
 
-// Add point and check winner
+// --- Add point ---
 function addPoint(player) {
   if (player === 1) score1++;
   if (player === 2) score2++;
@@ -51,20 +69,27 @@ function addPoint(player) {
   score1Display.textContent = score1;
   score2Display.textContent = score2;
 
-  // --- Victory condition ---
-  if (score1 === 3) {
-    declareWinner(player1Display.textContent);
-  } else if (score2 === 3) {
-    declareWinner(player2Display.textContent);
-  }
+  if (score1 === 3) declareWinner(player1Display.textContent);
+  if (score2 === 3) declareWinner(player2Display.textContent);
 }
 
-// Show reset confirmation modal
+// --- Sub point ---
+function subPoint(player) {
+  if (player === 1) score1--;
+  if (player === 2) score2--;
+
+  if (score1 < 0) score1 = 0;
+  if (score2 < 0) score2 = 0;
+
+  score1Display.textContent = score1;
+  score2Display.textContent = score2;
+}
+
+// --- Reset ---
 function askReset() {
   modalReset.show();
 }
 
-// Reset scores only (not names)
 function resetGame() {
   score1 = 0;
   score2 = 0;
@@ -75,13 +100,12 @@ function resetGame() {
   modalReset.hide();
 }
 
-// --- Winner function ---
-function declareWinner(winnerName) {
-  document.getElementById("winnerName").textContent = winnerName;
+// --- Winner ---
+function declareWinner(name) {
+  document.getElementById("winnerName").textContent = name;
   modalWinner.show();
 }
 
-// Start a NEW game (with new names)
 function newMatch() {
   score1 = 0;
   score2 = 0;
@@ -91,3 +115,35 @@ function newMatch() {
   modalWinner.hide();
   modalPlayer.show();
 }
+
+// --- Buzz: button + keyboard ---
+function playerPressed(player) {
+  if (buzzCooldown) return;
+
+  buzzCooldown = true;
+
+  // Play buzz sound
+  buzzSound.currentTime = 0;
+  buzzSound.play();
+
+  const name =
+    player === 1 ? player1Display.textContent : player2Display.textContent;
+
+  document.getElementById("pressedPlayerName").textContent = name;
+
+  modalPush.show();
+
+  setTimeout(() => {
+    buzzCooldown = false;
+  }, COOLDOWN_TIME);
+}
+
+// --- Keyboard Buzz ---
+document.addEventListener("keydown", function (event) {
+  if (event.target.tagName === "INPUT") return;
+
+  const key = event.key.toLowerCase();
+
+  if (key === "q") playerPressed(1);
+  if (key === "p") playerPressed(2);
+});

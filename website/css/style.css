@@ -61,3 +61,26 @@ h3 {
   animation: pulse 1s infinite; /* boucle tant que la souris est dessus */
   color: #fff;
 }
+
+.btn-blue {
+  background-color: #7cc7c2;
+  color: #fff;
+  border: none;
+}
+
+.text-blue {
+  color: #7cc7c2;
+  border: none;
+}
+
+.btn-orange {
+  background-color: #eb663b;
+  color: #fff;
+  border: none;
+}
+
+.btn-yellow {
+  background-color: #e6c14c;
+  color: #fff;
+  border: none;
+}

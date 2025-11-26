@@ -41,22 +41,52 @@
         <div class="mb-4">
           <h4>
             <span id="player1Display" class="fw-bold">Player 1</span> :
-            <span id="score1" class="text-primary fw-bold">0</span> points
+            <span id="score1" class="text-blue fw-bold">0</span> points
           </h4>
-          <button class="btn btn-success" onclick="addPoint(1)">+1</button>
+
+          <!-- Ligne boutons -->
+          <div class="d-flex justify-content-between align-items-center">
+            <!-- Boutons +1 et -1 alignés à gauche -->
+            <div>
+              <button class="btn btn-blue me-2" onclick="addPoint(1)">
+                + 1
+              </button>
+              <button class="btn btn-blue" onclick="subPoint(1)">- 1</button>
+            </div>
+
+            <!-- Buzz aligné à droite -->
+            <button class="btn btn-yellow" onclick="playerPressed(1)">
+              Buzz <span id="player1BuzzLabel" class="fw-bold">Player 1</span>
+            </button>
+          </div>
         </div>
 
         <div class="mb-4">
           <h4>
             <span id="player2Display" class="fw-bold">Player 2</span> :
-            <span id="score2" class="text-primary fw-bold">0</span> points
+            <span id="score2" class="text-blue fw-bold">0</span> points
           </h4>
-          <button class="btn btn-success" onclick="addPoint(2)">+1</button>
+
+          <!-- Ligne boutons -->
+          <div class="d-flex justify-content-between align-items-center">
+            <!-- Boutons +1 et -1 alignés à gauche -->
+            <div>
+              <button class="btn btn-blue me-2" onclick="addPoint(2)">
+                + 1
+              </button>
+              <button class="btn btn-blue" onclick="subPoint(2)">- 1</button>
+            </div>
+
+            <!-- Buzz aligné à droite -->
+            <button class="btn btn-yellow" onclick="playerPressed(2)">
+              Buzz <span id="player2BuzzLabel" class="fw-bold">Player 2</span>
+            </button>
+          </div>
         </div>
 
         <hr />
 
-        <button class="btn btn-danger w-100" onclick="askReset()">
+        <button class="btn btn-orange w-100" onclick="askReset()">
           Reset Game
         </button>
       </div>
@@ -73,6 +103,35 @@
     </footer>
 
     <!-- PLAYER NAME MODAL -->
+    <!-- KEYBOARD TIP MODAL -->
+    <div class="modal fade" id="tipModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content text-center p-4">
+          <h4>⌨️ Keyboard Tip</h4>
+          <p class="mb-3">On computer, you can buzz using the keyboard:</p>
+
+          <div class="d-flex justify-content-center gap-4 mb-3">
+            <div class="p-3 border rounded">
+              <strong>Q</strong><br />
+              Player 1
+            </div>
+            <div class="p-3 border rounded">
+              <strong>P</strong><br />
+              Player 2
+            </div>
+          </div>
+
+          <p class="text-muted small">
+            (You can still use the buttons on screen)
+          </p>
+
+          <button class="btn btn-blue w-100 mt-2" id="tipContinueBtn">
+            OK, got it!
+          </button>
+        </div>
+      </div>
+    </div>
+
     <div class="modal fade" id="playerModal" tabindex="-1">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -92,7 +151,7 @@
           </div>
 
           <div class="modal-footer">
-            <button class="btn btn-primary" onclick="startGame()">
+            <button class="btn btn-blue" onclick="startGame()">
               Start Game
             </button>
           </div>
@@ -105,7 +164,7 @@
         <div class="modal-content text-center p-4">
           <h4>🎮 Game Started!</h4>
           <p>Good luck players!</p>
-          <button class="btn btn-success" data-bs-dismiss="modal">OK</button>
+          <button class="btn btn-blue" data-bs-dismiss="modal">OK</button>
         </div>
       </div>
     </div>
@@ -120,7 +179,7 @@
             <button class="btn btn-secondary" data-bs-dismiss="modal">
               Cancel
             </button>
-            <button class="btn btn-danger" onclick="resetGame()">Reset</button>
+            <button class="btn btn-orange" onclick="resetGame()">Reset</button>
           </div>
         </div>
       </div>
@@ -134,8 +193,23 @@
             Congratulations <strong id="winnerName">Player</strong> !
           </p>
 
-          <button class="btn btn-success w-100 mt-2" onclick="newMatch()">
+          <button class="btn btn-yellow w-100 mt-2" onclick="newMatch()">
             Start a New Match
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="pushModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content text-center p-4">
+          <h3>🎉 Button Pressed!</h3>
+          <p class="mb-3">
+            <strong id="pressedPlayerName">Player</strong> has pressed his
+            button
+          </p>
+          <button class="btn btn-blue w-100 mt-2" data-bs-dismiss="modal">
+            OK
           </button>
         </div>
       </div>
