@@ -7,6 +7,19 @@ https://keepachangelog.com/
 
 ---
 
+## [0.4.0] — 2025-11-26
+
+### Added
+
+- buzz.mp3
+
+### Updated
+
+- score.html
+- score.js
+
+---
+
 ## [0.3.0] — 2025-11-25
 
 ### Updated
