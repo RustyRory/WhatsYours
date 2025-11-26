@@ -13,6 +13,7 @@ const modalStart = new bootstrap.Modal(document.getElementById("startModal"));
 const modalReset = new bootstrap.Modal(document.getElementById("resetModal"));
 const modalWinner = new bootstrap.Modal(document.getElementById("winnerModal"));
 const modalPush = new bootstrap.Modal(document.getElementById("pushModal"));
+const modalTip = new bootstrap.Modal(document.getElementById("tipModal")); // NEW modal
 
 // Cooldown anti-spam buzz
 let buzzCooldown = false;
@@ -20,6 +21,12 @@ const COOLDOWN_TIME = 1000;
 
 // --- Page load ---
 document.addEventListener("DOMContentLoaded", () => {
+  modalTip.show(); // Show keyboard tip first
+});
+
+// --- Continue after reading tip ---
+document.getElementById("tipContinueBtn").addEventListener("click", () => {
+  modalTip.hide();
   modalPlayer.show();
 });
 
@@ -106,7 +113,7 @@ function newMatch() {
   modalPlayer.show();
 }
 
-// --- Buzz (button or keyboard) ---
+// --- Buzz: button + keyboard ---
 function playerPressed(player) {
   if (buzzCooldown) return;
 
@@ -126,6 +133,7 @@ function playerPressed(player) {
 
 // --- Keyboard Buzz ---
 document.addEventListener("keydown", function (event) {
+  // Do NOT trigger buzz if typing in input
   if (event.target.tagName === "INPUT") return;
 
   const key = event.key.toLowerCase();
