@@ -7,6 +7,14 @@ https://keepachangelog.com/
 
 ---
 
+## [1.0.1] — 2025-11-27
+
+### Added
+
+- Printable kit
+
+---
+
 ## [1.0.0] — 2025-11-27
 
 ### Added

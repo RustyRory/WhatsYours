@@ -127,10 +127,8 @@ The first player to win **3 rounds** becomes the **What's Yours Champion**.
 ## 📦 Repository Structure
 
 ```
+/website → main folder of the project
 /assets → graphic elements, icons, colors, logos
-/game-rules → game rules (FR/EN)
-/minigames → briefs and mini-game prototypes
-/prototype → mockups, wireframes
 /docs → project documentation
 ```
 
